@@ -1,0 +1,28 @@
+import random
+import operator
+E=int(input("enter the number of employees:"))
+D={"Fitbit plus":7980,"Ipods":22349,"MI Band":999,"Cult pass":2799,"Macbook Pro":229900,"Digital Camera":11101,"Alexa":9999,"Sandwich Toaster":2195,"Microwave Oven":9800,"Scale":4999}
+R=[]
+for i in range(E):
+    res=key,val=random.choice(list(D.items()))
+    R.append(res)
+RD=dict(R)
+S=sorted(RD.items(),key=operator.itemgetter(1))
+RD2=dict(S)
+S2=[]
+for i in RD2:
+    print(i,":",RD2[i])
+    S2.append(RD2[i])
+print(S2)
+j=len(S2)
+S3=S2[j-1]-S2[0]
+print("And the difference between the choosen goodie with highest price and the lowest price is",S3)
+        
+output:
+enter the number of employees:4
+MI Band : 999
+Cult pass : 2799
+Fitbit plus : 7980
+Ipods : 22349
+[999, 2799, 7980, 22349]
+And the difference between the choosen goodie with highest price and the lowest price is 21350
